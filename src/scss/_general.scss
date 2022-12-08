@@ -1,0 +1,298 @@
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+
+header {
+    padding-top: 30px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &_link {
+        font-size: 18px;
+        line-height: 22px;
+        color: $second_main_color;
+        text-decoration: none;
+    }
+}
+
+.divider {
+    border: 0 solid $second_main_color;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    margin-top: 40px;
+}
+
+.introduce {
+    padding: 41px 0 104px 0;
+    min-height: 680px;
+
+    &_flexed_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &_title {
+        font-size: 47px;
+        line-height: 59px;
+        color: $black_color;
+        width: 124px;
+    }
+
+    &_text {
+        font-size: 18px;
+        line-height: 22px;
+        color: $black_color;
+        width: 145px;
+        margin-top: 95px;
+    }
+
+    &_language {
+        transform: rotate(-90deg);
+        font-size: 16px;
+        color: $second_main_color;
+    }
+
+    &_portfolio_photo {
+        text-align: center;
+        margin-top: 59px;
+    }
+}
+
+
+.about_me {
+    background-color: $main_bg_color;
+    padding: 124px 0 107px 0;
+    min-height: 506px;
+
+    &_title {
+        font-size: 34px;
+        text-align: center;
+        color: $black_color;
+        text-align: center;
+    }
+
+    &_text {
+        width: 485px;
+        margin: 0 auto;
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: 22px;
+        color: $black_color;
+    }
+}
+
+.skills {
+    min-height: 610px;
+    padding: 91px 0 112px 0;
+
+    &_title {
+        font-size: 34px;
+        text-align: center;
+        color: $black_color;
+    }
+
+    &_text {
+        margin-top: 70px;
+        font-size: 18px;
+        text-align: center;
+        color: $black_color;
+    }
+
+    &_flexed_block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 85px;
+
+        .skill_block {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 160px;
+
+            .skill_img {
+                text-align: center;
+            }
+        }
+
+        @for $i from $first_img to $last_img {
+            .stars {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .star-#{$i} {
+                    margin-top: 40px;
+                    background: url("../icons/stars/black_star_img.svg") no-repeat;
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+
+        .skill_block:first-child {
+            @for $i from $first_img to $last_img {
+                .stars {
+                    @if $i ==5 {
+                        .star-#{$i} {
+                            background: url("../icons/stars/white_star_img.svg") no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        .skill_block:nth-child(2) {
+            @for $i from $first_img to $last_img {
+                .stars {
+                    @if $i >3 {
+                        .star-#{$i} {
+                            background: url("../icons/stars/white_star_img.svg") no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        .skill_block:nth-child(3) {
+            @for $i from $first_img to $last_img {
+                .stars {
+                    @if $i ==5 {
+                        .star-#{$i} {
+                            background: url("../icons/stars/white_star_img.svg") no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        .skill_block:nth-child(4) {
+            @for $i from $first_img to $last_img {
+                .stars {
+                    @if $i ==5 {
+                        .star-#{$i} {
+                            background: url("../icons/stars/white_star_img.svg") no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+
+        .skill_text {
+            text-align: center;
+            white-space: pre-line;
+            display: flex;
+            justify-content: center;
+            overflow-wrap: anywhere;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+    }
+}
+
+
+.portfolio {
+    padding: 112px 0 96px 0;
+    min-height: 2253px;
+    background-color: $main_bg_color;
+
+    &_title {
+        font-size: 34px;
+        text-align: center;
+        color: $black_color;
+    }
+
+    .online_fashion_store {
+        margin-top: 65px;
+    }
+
+    .online_fashion_store_link,
+    .reebok_link,
+    .braun_landing_page_link {
+        font-size: 18px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: $black_color;
+        text-align: center;
+        display: block;
+        margin-top: 44px;
+    }
+
+    .reebok_store,
+    .braun_landing_page {
+        margin-top: 105px;
+    }
+}
+
+
+.footer {
+    padding: 120px 0 130px 0;
+    min-height: 623px;
+
+    &_title {
+        font-size: 34px;
+        line-height: 42px;
+        text-align: center;
+        color: $black_color;
+    }
+
+    &_text {
+        font-size: 18px;
+        line-height: 22px;
+        color: $black_color;
+        width: 275px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 42px;
+    }
+
+    &_btn {
+        color: #fff;
+        font-size: 18px;
+        width: 181px;
+        height: 42px;
+        border-radius: 50px;
+        background-color: $black_color;
+        margin: 0 auto;
+        display: block;
+        margin-top: 38px;
+        cursor: pointer;
+    }
+
+    &_socials {
+        display: flex;
+        justify-content: space-between;
+        max-width: 324px;
+        margin: 0 auto;
+        margin-top: 85px;
+        flex-wrap: wrap;
+
+        div {
+            a {
+                border:none;
+                outline:none;
+                text-decoration:none;
+                color:inherit;
+            }
+        }
+    }
+
+    &_end_text {
+        color: #828282;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        width: 243px;
+        margin: 0 auto;
+        margin-top: 47px;
+        word-wrap: break-word;
+    }
+}
