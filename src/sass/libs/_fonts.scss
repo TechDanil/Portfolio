@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    src: local('MuseoSansCyrl-500'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    src: local('MuseoSansCyrl-300'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
